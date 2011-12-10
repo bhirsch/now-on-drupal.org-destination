@@ -5,6 +5,23 @@
 
 /**
  * @param $short_url
+ *  string, e.g. http://bit.ly/123
+ * 
+ * @return
+ *  string, destination url or FALSE
+ */
+function destionation_url($short_url) {
+  $header = destination($short_url);
+  if ($header['http_code'] == 200) {
+    return $header['url'];
+  }
+  else {
+    return false;  
+  }
+}
+
+/**
+ * @param $short_url
  *  string, shortened url (e.g. http://bit.ly/xyz)
  * 
  * @return
