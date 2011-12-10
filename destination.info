@@ -1,5 +1,5 @@
 core = "7.x"
 description = "Get destination URL from shortened URL"
-name = "Get URL"
-project = "get_url"
+name = "Destination"
+project = "destination"
 version = "7.x-1.0"
