@@ -10,7 +10,7 @@
  * @return
  *  string, destination url or FALSE
  */
-function destionation_url($short_url) {
+function destination_url($short_url) {
   $header = destination($short_url);
   if ($header['http_code'] == 200) {
     return $header['url'];
